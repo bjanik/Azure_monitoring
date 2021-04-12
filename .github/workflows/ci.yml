@@ -22,5 +22,5 @@ jobs:
             username: ${{ secrets.REGISTRY_USERNAME }}
             password: ${{ secrets.REGISTRY_PASSWORD }}
         - run: |
-            docker build {{ env.working-directory }} -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/azuremonitorback
+            docker build ${{ env.working-directory }} -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/azuremonitorback
             docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/azuremonitorback
